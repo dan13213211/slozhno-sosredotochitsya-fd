@@ -7,9 +7,17 @@
 }
 
 body {
+  margin: 0;
   min-inline-size: 375px;
   max-inline-size: 1440px;
-  margin: 0 auto;
+  background-image: var(--page-bg-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--page-bg-color);
+  padding-left: 2.6%;
+  padding-right: 2.6%;
 }
 
 h1,
