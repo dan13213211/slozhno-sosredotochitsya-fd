@@ -1,4 +1,6 @@
 .page {
+  margin: 0 auto;
+  padding: 0;
   background-image: var(--page-bg-image);
   background-position: center;
   background-attachment: fixed;
