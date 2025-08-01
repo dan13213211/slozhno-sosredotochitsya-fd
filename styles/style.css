@@ -1,14 +1,10 @@
 .page {
-  margin: 0 auto;
-  padding: 0;
   background-image: var(--page-bg-image);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--page-bg-color);
-  padding-left: 2.6%;
-  padding-right: 2.6%;
 }
 
 .header {
