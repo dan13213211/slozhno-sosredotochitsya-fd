@@ -167,7 +167,7 @@
 
 .main_text {
   font-family: var(--font-family);
-  color: var(--main-text-color);
+  color: var(--main-text-colors);
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 23.4px;
   margin-top: -18px;
