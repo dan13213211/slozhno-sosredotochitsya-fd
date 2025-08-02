@@ -1,4 +1,7 @@
 .page {
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  margin: 0 auto;
   background-image: var(--page-bg-image);
   background-position: center;
   background-attachment: fixed;
