@@ -7,6 +7,7 @@
   background-color: var(--page-bg-color);
   padding: 10px;
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .header {
@@ -50,7 +51,7 @@
 
 .watermark {
   font-family: var(--font-family);
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-size: var(--main-text-size);
   position: absolute;
   right: 28px;
   top: 11px;
@@ -82,7 +83,7 @@
   font-family: var(--font-family);
   text-transform: lowercase;
   background-color: transparent;
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-size: var(--main-text-size);
   color: var(--menu-button);
   border: none;
   outline: 1px solid transparent;
@@ -109,18 +110,22 @@
   border-bottom: 1px solid var(--menu-button);
 }
 
-.header_title {
+.header_title,
+.footer__title {
+  font-size: var(--header-footer-title);
   font-family: var(--font-family);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: var(--font-weight);
   line-height: 83%;
-  text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--header-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.header_title {
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .text_header {
   font-family: var(--font-family);
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-size: var(--main-text-size);
   font-weight: var(--font-weight);
   color: var(--page-bg-color);
   line-height: 23.4px;
@@ -129,7 +134,7 @@
 
 .title-decor {
   font-family: var(--font-family);
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-size: var(--main-text-size);
   background-color: var(--accent-color);
   color: var(--header-text-color);
   font-weight: var(--font-weight);
@@ -142,7 +147,7 @@
 .main_text {
   font-family: var(--font-family);
   color: var(--main-text-color);
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-size: var(--main-text-size);
   line-height: 23.4px;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -150,7 +155,7 @@
 
 .main_title {
   font-family: var(--font-family);
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-size: var(--main-text-size);
   font-weight: var(--font-weight);
   color: var(--menu-button);
   padding-bottom: 20px;
@@ -163,7 +168,7 @@
 .section__title {
   font-family: var(--font-family);
   color: var(--menu-button);
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-size: var(--main-text-size);
   padding-top: 30px;
   padding-bottom: 22px;
 }
@@ -187,11 +192,6 @@
 .link:focus-visible {
   border: none;
   outline: 1px solid var(--main-text-color);
-}
-
-.title-decor-text {
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  font-weight: normal;
 }
 
 .title-decor-header {
@@ -224,31 +224,27 @@
   align-items: center;
 }
 
-.footer__title {
-  font-size: 116px;
-  line-height: 83%;
-  color: var(--header-color);
-  font-family: var(--font-family);
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
 @media (min-width: 768px) {
   .page {
     padding: 20px;
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .header {
     min-height: 1024px;
   }
 
+  .header_title,
+  .footer__title {
+    font-size: var(--main-text-size-desctop);
+  }
+
   .frame::before {
-    position: absolute;
     top: 20px;
   }
 
   .frame::after {
-    position: absolute;
     bottom: 20px;
   }
 
@@ -293,11 +289,12 @@
   }
 
   .title-decor {
-    line-height: 23.4px;
-    grid-column: 2;
-    grid-row: -1;
     margin-top: 0;
     margin-bottom: 10px;
+  }
+
+  .title-decor-header {
+    margin-bottom: 20px;
   }
 
   .main_text {
@@ -315,10 +312,6 @@
     max-width: 236px;
     min-height: 90px;
     padding: 0;
-  }
-
-  .title-decor-header {
-    margin-bottom: 20px;
   }
 
   .section_main-tips {
@@ -360,12 +353,7 @@
   }
 
   .footer {
-    height: 100vh;
     min-height: 1024px;
-  }
-
-  .footer__title {
-    font-size: 120px;
   }
 }
 
@@ -382,10 +370,6 @@
   .header__theme-menu-list {
     flex-direction: row;
     padding-top: 18px;
-  }
-
-  .header_title {
-    font-size: 157px;
   }
 
   .text_header {
@@ -411,9 +395,5 @@
   .footer {
     min-height: 768px;
     margin-top: 40px;
-  }
-
-  .footer__title {
-    font-size: 157px;
   }
 }

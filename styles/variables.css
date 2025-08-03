@@ -9,4 +9,7 @@
   --font-weight: bold;
   --menu-button: #ff0070;
   --header-text-color: #000028;
+  --main-text-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --main-text-size-desctop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --header-footer-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
