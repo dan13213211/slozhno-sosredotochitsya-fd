@@ -148,6 +148,10 @@
   padding-top: 40px;
 }
 
+.content-section {
+  padding-top: 0;
+}
+
 .main_text {
   font-family: var(--font-family);
   color: var(--main-text-color);
